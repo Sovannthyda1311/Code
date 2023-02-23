@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+    <title>Hello, world!</title>
+    <style>
+        nav{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    background: #56042C;
+    padding: 10px 10px 0px 10px;
+
+}
+
+#logo_wc{
+    max-height: 60px;
+}
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0px;
+    margin-left: 40px;
+    padding-top: 20px;
+}
+
+#navbar li{
+    list-style: none;
+    padding: 10px 20px;
+    position: relative;
+    border-bottom: solid 2px #56042C;
+}
+
+#navbar li a{
+    text-decoration: none;
+    font-size: 1.2 rem;
+    font-weight: 400;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+#navbar li:hover{
+    background: #962d4c;
+    border-bottom: solid 2px #fff;
+}
+
+#mobile {
+    display: none;
+}
+
+#mobile i {
+    left: 10px;
+    color: #fff;
+}
+
+@media screen and (max-width: 769px) {
+    nav{
+        justify-content: space-between;
+    }
+    #navbar{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 75px;
+        right: -250px;
+        width: 250px;
+        height: 100vh;
+        background: #56042C;
+        padding: 40px 0px 0px 20px;
+        transition: 0.4s ease-in-out;
+    }
+    
+    #navbar.active{
+        right: 0px;
+    }
+
+    #mobile {
+        display: block;
+        margin-right: 10px;
+    }
+
+    #mobile i {
+        cursor: pointer;
+        font-size: 24px;
+
+    }
+}
+    section{
+        height: 100vh;
+        background: gray;
+    }
+    .box-border{
+        background-color: #7b8996;
+    }
+    .flage-img img{
+    height: 60px;
+    width: 100px;
+    object-fit:
+    cover;
+    }
+
+    </style>
+  </head>
+<body>
+    <nav>
+        <div>
+            <a href="index.html">
+                <img id="logo_wc" src="https://cdn-ukwest.onetrust.com/logos/236f1ae3-e97b-4fdf-9cb6-0803d748da2f/5ebc1394-b1a3-4a42-88c6-20bb30cc3831/48d0f561-6f01-496b-b552-aebd8fb0cbf3/logo_(1).png" alt="logo"></img>
+            </a>
+        </div>
+        <div>
+            <ul id="navbar" className={this.state.clicked ? "#navbar active": "#navbar"}>
+                <li>
+                    <a as={Link} to={"/match"}>Trận đấu</a>
+                </li>
+                <li>
+                    <a href="#">Tin tức</a>
+                </li>
+                <li>
+                    <a href="#">Sơ đồ thi đấu</a>
+                </li>
+                <li>
+                    <a href="#">Cầu thủ</a>
+                </li>
+                <li>
+                    <a href="#">Bảng xếp hạng</a>
+                </li>
+                <li>
+                    <a href="#">Số liệu thống kê</a>
+                </li>
+            </ul>
+        </div>
+
+        <div id= "mobile" onClick={this.handleClick}>
+            <i id="bar" className= {this.state.clicked ? 'fas fa-times' :'fas fa-bars'} ></i>
+            
+        </div>    
+       </nav>
+       <div class="container-fluid p-4">
+       <div class="col-md-8">
+            <div class="row justify-content-center">
+                <div class="col-md-4">
+                    <p>Trận đấu</p>
+                    </div>
+                <div class="col-md-4">
+                    <p>Trận đấu</p>
+                    </div>
+                <div class="col-md-4">
+                    <p>Trận đấu</p>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+</body>
+</html>

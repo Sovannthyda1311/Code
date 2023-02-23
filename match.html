@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+    <title>Hello, world!</title>
+    <style>
+        nav{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    background: #56042C;
+    padding: 10px 10px 0px 10px;
+
+}
+
+#logo_wc{
+    max-height: 60px;
+}
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0px;
+    margin-left: 40px;
+    padding-top: 20px;
+}
+
+#navbar li{
+    list-style: none;
+    padding: 10px 20px;
+    position: relative;
+    border-bottom: solid 2px #56042C;
+}
+
+#navbar li a{
+    text-decoration: none;
+    font-size: 1.2 rem;
+    font-weight: 400;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+#navbar li:hover{
+    background: #962d4c;
+    border-bottom: solid 2px #fff;
+}
+
+#mobile {
+    display: none;
+}
+
+#mobile i {
+    left: 10px;
+    color: #fff;
+}
+
+@media screen and (max-width: 769px) {
+    nav{
+        justify-content: space-between;
+    }
+    #navbar{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 75px;
+        right: -250px;
+        width: 250px;
+        height: 100vh;
+        background: #56042C;
+        padding: 40px 0px 0px 20px;
+        transition: 0.4s ease-in-out;
+    }
+    
+    #navbar.active{
+        right: 0px;
+    }
+
+    #mobile {
+        display: block;
+        margin-right: 10px;
+    }
+
+    #mobile i {
+        cursor: pointer;
+        font-size: 24px;
+
+    }
+}
+    section{
+        height: 100vh;
+        background: gray;
+    }
+    .box-border{
+        background-color: #7b8996;
+    }
+    .flage-img img{
+    height: 60px;
+    width: 100px;
+    object-fit:
+    cover;
+    }
+    .win-arrow{
+        vertical-align: middle;
+    }
+    .video-btn{
+        background-color: #56042C;
+        color: white;
+    }
+    .video-btn:hover{
+        color: white;
+        opacity: 0.8;
+    }
+    </style>
+  </head>
+  <body>
+    <nav>
+        <div>
+            <a href="index.html">
+                <img id="logo_wc" src="https://cdn-ukwest.onetrust.com/logos/236f1ae3-e97b-4fdf-9cb6-0803d748da2f/5ebc1394-b1a3-4a42-88c6-20bb30cc3831/48d0f561-6f01-496b-b552-aebd8fb0cbf3/logo_(1).png" alt="logo"></img>
+            </a>
+        </div>
+        <div>
+            <ul id="navbar" className={this.state.clicked ? "#navbar active": "#navbar"}>
+                <li>
+                    <a as={Link} to={"/match"}>Trận đấu</a>
+                </li>
+                <li>
+                    <a href="#">Tin tức</a>
+                </li>
+                <li>
+                    <a href="#">Sơ đồ thi đấu</a>
+                </li>
+                <li>
+                    <a href="#">Cầu thủ</a>
+                </li>
+                <li>
+                    <a href="#">Bảng xếp hạng</a>
+                </li>
+                <li>
+                    <a href="#">Số liệu thống kê</a>
+                </li>
+            </ul>
+        </div>
+
+        <div id= "mobile" onClick={this.handleClick}>
+            <i id="bar" className= {this.state.clicked ? 'fas fa-times' :'fas fa-bars'} ></i>
+            
+        </div>    
+       </nav>
+       <section>
+        <!--Start tran dau container-->
+       <div class="container-fluid p-4">
+        <!--Vong dau ban header1-->
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="col-md-3 border-bottom pe-3">
+                    <h5 class="fw-500 text-white"> Vòng đấu bảng - 20/11 </h5>
+                </div>
+            </div>
+        </div>
+    <!--End dau ban header1-->
+    <!--Start bang tran dau1-->
+    <div class="text-white">
+        <div class="row justify-content-center px-3">
+            <div class="col-md-8 mt-2 border border-2 rounded box-border p-3">
+                <div class="row">
+                    <!--Start bang 1-->
+                    <div class="col-md-6 border-end">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <p>Bảng A</p>
+                            </div>
+                            <div class="col-md-8 border-end border-2 pe-0">
+                                <div class="d-flex flex-row align-items-baseline mb-3">
+                                    <div class="flage-img">
+                                        <img src="https://cdn.britannica.com/76/5776-004-54A070FA/Flag-Qatar.jpg">
+                                    </div>
+                                    <div class="px-2">
+                                        <p>Qatar</p>
+                                    </div>
+                                    <div class="px-2 ms-auto me-3">
+                                        <p>0</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-row align-items-baseline mb-2">
+                                    <div class="flage-img">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Flag_of_Ecuador.svg/383px-Flag_of_Ecuador.svg.png">
+                                    </div>
+                                    <div class="px-2">
+                                        <p>Ecuador</p>
+                                    </div>
+                                    <div class="ps-2 pe-0 ms-auto">
+                                        <p>2</p>
+                                    </div>
+                                    <div class="p-0">
+                                        <span class="material-icons-outlined win-arrow">
+                                            arrow_left
+                                            </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 text-center">
+                                <p class="mb-1">Kết thúc</p>
+                                <p class="mb-1">20/11</p>
+                                <p class="mb-1">Highlights</p>
+                                <a class="btn mt-4 rounded-0 video-btn" href="#" role="button">Video</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End bang 1-->
+
+                    <!--Start bang 2-->
+
+                    <div class="col-md-6">
+                        
+                    </div>
+                    <!--End bang 2-->
+
+                </div>
+            </div>
+        </div>
+    </div>
+        <!--End bang tran dau1-->
+        <!--Vong dau ban header2-->
+        <div class="row justify-content-center mt-3">
+            <div class="col-md-8">
+                <div class="col-md-3 border-bottom pe-3">
+                    <h5 class="fw-500 text-white"> Vòng đấu bảng - 21/11 </h5>
+                </div>
+            </div>
+        </div>
+        <!--End dau ban header2-->
+        <!--Start bang tran dau2-->
+        <div class="text-white">
+        <div class="row justify-content-center px-3">
+            <div class="col-md-8 mt-2 border border-2 rounded box-border p-3">
+                <div class="row">
+                    <!--Start bang 1-->
+                    <div class="col-md-6 border-end">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <p>Bảng B</p>
+                            </div>
+                            <div class="col-md-8 border-end border-2 pe-0">
+                                <div class="d-flex flex-row align-items-baseline mb-2">
+                                    <div class="flage-img">
+                                        <img src="https://cdn.britannica.com/44/344-004-494CC2E8/Flag-England.jpg">
+                                    </div>
+                                    <div class="px-2">
+                                        <p>England</p>
+                                    </div>
+                                    <div class="ps-2 pe-0 ms-auto">
+                                        <p>6</p>
+                                    </div>
+                                    <div class="p-0">
+                                        <span class="material-icons-outlined win-arrow">
+                                            arrow_left
+                                            </span>
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-row align-items-baseline mb-3">
+                                    <div class="flage-img">
+                                        <img src="data:image/png;base64,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">
+                                    </div>
+                                    <div class="px-2">
+                                        <p>Iran</p>
+                                    </div>
+                                    <div class="px-2 ms-auto me-3">
+                                        <p>2</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 text-center">
+                                <p class="mb-1">Kết thúc</p>
+                                <p class="mb-1">21/11</p>
+                                <p class="mb-1">Highlights</p>
+                                <a class="btn mt-4 rounded-0 video-btn" href="#" role="button">Video</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End bang 1-->
+
+                    <!--Start bang 2-->
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <p>Bảng A</p>
+                            </div>
+                            <div class="col-md-8 border-end border-2 pe-0">
+                                <div class="d-flex flex-row align-items-baseline mb-3">
+                                    <div class="flage-img">
+                                        <img src="https://cdn.britannica.com/70/5070-004-2963C5E1/Flag-Senegal.jpg">
+                                    </div>
+                                    <div class="px-2">
+                                        <p>Senegal</p>
+                                    </div>
+                                    <div class="px-2 ms-auto me-3">
+                                        <p>0</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-row align-items-baseline mb-2">
+                                    <div class="flage-img">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Flag_of_the_Netherlands.svg/1200px-Flag_of_the_Netherlands.svg.png">
+                                    </div>
+                                    <div class="px-2">
+                                        <p>Netherland</p>
+                                    </div>
+                                    <div class="ps-2 pe-0 ms-auto">
+                                        <p>2</p>
+                                    </div>
+                                    <div class="p-0">
+                                        <span class="material-icons-outlined win-arrow">
+                                            arrow_left
+                                            </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 text-center">
+                                <p class="mb-1">Kết thúc</p>
+                                <p class="mb-1">22/11</p>
+                                <p class="mb-1">Highlights</p>
+                                <a class="btn mt-4 rounded-0 video-btn" href="#" role="button">Video</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End bang 2-->
+
+                </div>
+            </div>
+        </div>
+        </div>
+    <!--End bang tran dau2-->
+       
+
+
+
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
